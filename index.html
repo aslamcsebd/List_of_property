@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <meta http-equiv="refresh" content="10" /> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row justify-content-center bg-info">
+			<div class="col-md-10 col-8 text-center p-0 mt-3 mb-2">
+				<div class="card px-0 p-4 pb-0 mt-3 mb-3">
+					<h3 id="heading" class="hide">Fill all form field to go to next step</h3>
+					
+					<form id="msform" action="#" method="post" enctype="multipart/form-data">
+						<!-- progressbar -->
+						<!-- <ul id="progressbar">
+							<li class="active" id="account"><strong>Basic info</strong></li>
+							<li id="personal"><strong>Layout and pricing</strong></li>
+							<li id="payment"><strong>Image</strong></li>
+							<li id="confirm"><strong>Finish</strong></li>
+						</ul> -->
+						<ul id="progressbar" class="text-center hide">
+							<li class="active" id="account"><strong>Basic info</strong></li>
+							<li id="layout"><strong>Layout and pricing</strong></li>
+							<li id="facilities"><strong> Facilities & services</strong></li>
+							<li id="amenities"><strong> Amenities</strong></li>
+							<li id="photos"><strong> Photos </strong></li>
+							<li id="policies"><strong> Policies</strong></li>
+							<li id="payment"><strong> Payments</strong></li>
+							<li id="confirm"><strong>Finish</strong></li>
+						</ul>
+						<div class="progress hide">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="50"></div>
+						</div>
+						<br>
+
+					<!-- Basic info -->
+						<fieldset>
+							<div class="form-card">
+								
+								<div class="row">
+									<div class="col-7 col-md-8">
+										<h2 class="fs-title">Welcome [Manager Name]!:</h2>
+									</div>
+									<div class="col-5 col-md-4">
+										<h2 class="steps">Step 1 - 7</h2>
+									</div>
+								</div>
+								<div class="fieldset">
+									<fieldset>
+	               				<legend>Property and Rating</legend>
+										<div class="row">
+											<div class="col-7 col-md-8">
+												<label class="fieldlabels">What is the name of your property?: *</label> 
+												<input type="text" name="email" placeholder="Property Name" /> 
+												<span class="small_info">This name will be seen by guests when they search for a place to stay.</span>
+											</div>
+											<div class="col col-md-4">
+												<div class="row">
+													<label class="fieldlabels">Star rating: *</label>											
+												</div>
+												<div class="row">											
+													<select class="fieldlabels col-6">
+														<option>N/A</option>											
+														<option>1 *</option>											
+														<option>2 **</option>											
+														<option>3 ***</option>											
+														<option>4 ****</option>											
+														<option>5 *****</option>											
+													</select>
+												</div>
+											</div>									
+										</div>
+									</fieldset>
+								</div>
+
+								<div class="fieldset">
+									<fieldset>
+	               				<legend>Where is your property located?</legend>
+											<div class="row">
+												<div class="col">
+													<label class="fieldlabels">Full Address: *</label>
+													<textarea type="text" name="email" placeholder="Address" rows="5"></textarea> 
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<label class="fieldlabels">Country/region: *</label>
+															<input type="text" name="email" placeholder="" />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<label class="fieldlabels">City: *</label>
+															<input type="text" name="email" placeholder="" />
+														</div>
+														<div class="col">
+															<label class="fieldlabels">Post Code: *</label>
+															<input type="text" name="email" placeholder="" />
+														</div>
+													</div> 
+												</div>							
+											</div>
+										</fieldset>
+									</div>
+
+								<div class="fieldset">
+									<fieldset>
+	               				<legend>What are the contact details for this property?</legend>
+										<div class="row">
+											<div class="col">
+												<label class="fieldlabels">Contact name: *</label> 
+												<input type="text" name="email" placeholder="Name" />
+											</div>
+											<div class="col">
+												<label class="fieldlabels">Phone number: *</label> 
+												<input type="text" name="email" placeholder="" />
+											</div>
+											<div class="col">
+												<label class="fieldlabels">Alternative phone number (optional): *</label> 
+												<input type="text" name="email" placeholder="" />
+											</div>									
+										</div>
+										<div class="row">
+											<div class="col-7">
+												<label class="fieldlabels">Do you own multiple hotels, or are you part of a property management company or group?</label>
+												<div class="radio-toolbar">
+													<div class="radio">
+			                              	<input type="radio" id="multipleHotels" name="multipleHotels" value="yes" >
+			                              	<label for="multipleHotels"> Yes</label>																
+													</div>
+			                              <div class="radio">
+	                                    	<input type="radio" id="multipleHotelsDisable" name="multipleHotels" value="no" checked>
+	                                    	<label for="multipleHotelsDisable">No</label>					                              	
+			                              </div>
+	                                 </div>		
+											</div>
+											<div class="row none" id="multipleHotelsTabs">
+												<div class="col" data_id="multipleHotels">
+													<label class="fieldlabels">Name of company, group or chain:</label>
+													<div class="row">
+														<div class="col">
+															<input type="text" id="channel_manager_name" name="multipleHotelsName" maxlength="100" placeholder="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+
+								<div class="fieldset row">
+									<div class="col">
+										<fieldset>
+		               				<legend>Do you use a channel manager?</legend>
+
+		               				<label class="small_info">
+		               					A channel manager is a tool that lets you choose what you sell across all the different sites you might list your place on. You can then set your prices and open and close dates in your calendar on all of these sites in one place.
+		               				</label> <br>
+		               				<label class="small_info">
+												If you use a channel manager, tell us below. We'll use this information to help you connect it to Chutyrooms.com in the future. It also helps if you tell us the brand name of your channel manager.
+											</label>
+											<div class="row">
+												<div class="col">
+		                                 <div class="radio-toolbar">
+														<div class="radio">
+				                              	<input type="radio" id="managerVisiable" name="channelManager" value="yes" checked>
+				                              	<label for="managerVisiable"> I use a channel manager</label>																
+														</div>
+				                              <div class="radio">
+		                                    	<input type="radio" id="managerDisable" name="channelManager" value="no">
+		                                    	<label for="managerDisable">I don't use a channel manager</label>					                              	
+				                              </div>
+		                                 </div>						       
+												</div>
+											</div>
+											<div class="row" id="tabs">
+												<div class="col" data_id="2">
+													<label class="fieldlabels">Enter name (optional)</label>
+													<div class="row">
+														<div class="col">
+															<input type="text" id="channel_manager_name" name="channel_manager_name" maxlength="100" placeholder="Channel manager's name">															
+														</div>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>	
+
+							</div>
+							<input type="button" name="next" class="next action-button" value="Next" />
+						</fieldset>
+
+					<!-- Layout and pricing -->
+						<fieldset>
+							<div class="form-card">
+								<div class="row">
+									<div class="col-7">
+										<h2 class="fs-title">Layout and pricing:</h2>
+									</div>
+									<div class="col-5">
+										<h2 class="steps">Step 2 - 7</h2>
+									</div>
+								</div>
+
+								<div class="fieldset hide">
+									<fieldset>
+	               				<legend>Please select</legend>
+										<div class="row">
+											<div class="col-4">
+												<label class="fieldlabels">Room type: *</label> 
+												<select class="fieldlabels" id="roomType">
+													<option>Please select</option>											
+													<option value="">Single</option>											
+													<option value="">Double</option>											
+													<option value="">Large</option>											
+													<option value="">Extra Large</option>									
+												</select>
+											</div>																			
+										</div>
+
+										<div class="none" id="roomTypeTabs">
+											<div class="row mt-2" data_id="roomType">
+												<div class="col">
+													<label class="fieldlabels">Room name: *</label> 
+													<select name="room_name_id" id="room_name_select">
+														<option value="" class="hidden">Please select</option>
+														<option value="69">Budget Single Room</option>
+														<option value="341">Deluxe Single Room</option>
+														<option value="343">Deluxe Single Room with Balcony</option>
+														<option value="345">Deluxe Single Room with Sea View</option>
+														<option value="578">Economy Single Room</option>
+														<option value="15963">Large Single Room</option>
+														<option value="1965">New Year's Eve Special - Single Room</option>
+														<option value="991">Single Room</option>
+														<option value="196535">Single Room - Disability Access</option>
+														<option value="1001">Single Room with Balcony</option>
+														<option value="1002">Single Room with Bath</option>
+														<option value="1000">Single Room with Bathroom</option>
+														<option value="1007">Single Room with Garden View</option>
+														<option value="1010">Single Room with Lake View</option>
+														<option value="1012">Single Room with Mountain View</option>
+														<option value="4583">Single Room with Park View</option>
+														<option value="56365">Single Room with Pool View</option>
+														<option value="12208">Single Room with Private Bathroom</option>
+														<option value="105148">Single Room with Private External Bathroom</option>
+														<option value="1013">Single Room with Sea View</option>
+														<option value="1014">Single Room with Shared Bathroom</option>
+														<option value="70201">Single Room with Shared Shower and Toilet</option>
+														<option value="1015">Single Room with Shared Toilet</option>
+														<option value="1016">Single Room with Shower</option>
+														<option value="1017">Single Room with Terrace</option>
+														<option value="4595">Small Single Room</option>
+														<option value="1141">Standard Single Room</option>
+														<option value="56285">Standard Single Room with Mountain View</option>
+														<option value="140425">Standard Single Room with Sauna</option>
+														<option value="1145">Standard Single Room with Sea View</option>
+														<option value="35444">Standard Single Room with Shared Bathroom</option>
+														<option value="1146">Standard Single Room with Shower</option>
+														<option value="1334">Superior Single Room</option>
+														<option value="98584">Superior Single Room with Lake View</option>
+														<option value="1338">Superior Single Room with Sea View</option>
+													</select>
+													<small lass="small_info">This is the name guests will see on the chutyrooms.com website.</small>
+												</div>
+												<div class="col">
+													<label class="fieldlabels">Custom name (optional): *</label> 
+													<input type="text" name="email" value="" size="3" placeholder="" />
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-4 col-md-6">
+												<label class="fieldlabels">Smoking policy: *</label> 
+												<select class="fieldlabels">
+													<option>Non-smoking</option>											
+													<option>Smoking</option>											
+													<option>I have both smoking and non-smoking options for this room type</option>
+												</select>
+											</div>
+											<div class="col-3 col-md small_width">
+												<label class="fieldlabels">Number of rooms (of this type): *</label> 
+												<input type="text" name="email" value="1" size="3" placeholder="" />
+											</div>									
+										</div>
+									</fieldset>
+								</div>
+
+								<div class="fieldset hide">
+									<fieldset>
+	               				<legend>Bed options</legend>
+											<label class="fieldlabels">What kind of beds are available in this room?: *</label>
+											<div id="productExtraBody">
+												<div class='row'>
+													<div class='col-md-6'>
+														<select class='fieldlabels'>
+															<option value='1'>Single bed &nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm wide</option>
+															<option value='2'>Double bed &nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm wide</option>
+															<option value='3'>Large bed (King size) &nbsp;&nbsp;/&nbsp;&nbsp;151-180 cm wide</option>
+															<option value='4'>Extra-large double bed (Super-king size) &nbsp;&nbsp;/&nbsp;&nbsp;181-210 cm wide</option>
+															<option value='5'>Bunk bed &nbsp;&nbsp;/&nbsp;&nbsp;Variable Size</option>
+															<option value='6'>Sofa bed &nbsp;&nbsp;/&nbsp;&nbsp;Variable Size</option>
+															<option value='7'>Futon Mat &nbsp;&nbsp;/&nbsp;&nbsp;Variable Size</option>
+														</select>
+													</div>
+													<p class='multiple'><b>X</b>
+													</p>
+													<div class='col-md-4'>
+														<select class='fieldlabels'>
+															<option>Number of beds</option>
+															<option value='1'>1</option>
+															<option value='2'>2</option>
+															<option value='3'>3</option>
+															<option value='4'>4</option>
+															<option value='5'>5</option>
+															<option value='6'>6</option>
+															<option value='7'>7</option>
+															<option value='8'>8</option>
+															<option value='9'>9</option>
+															<option value='10'>10</option>
+															<option value='11'>11</option>
+															<option value='12'>12</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+		                        	<div class="row justify-content-between"> 
+			                        	<div class="col-lg-4 col-md-7 small_width">
+													<label class="fieldlabels">How many guests can stay in this room?: *</label>
+													<input type="text" name="email" value="1" size="3" />
+												</div>		      
+			                        	<div class="col-lg-auto col-md-4 mt-4 mr-5 pt-2">
+													<button type="button" id="addExtraField" class="btn btn-primary">
+				                           	<i class="fa fa-plus"> &nbsp; Add another bed</i>
+				                        	</button>
+		                        		</div>
+		                        		<div class="col-lg-1 col-md"></div>
+		                        	</div>		                        	
+									</fieldset>
+								</div>
+
+								<div class="fieldset small_width">
+									<fieldset>
+										<div class="row pt-3">
+											<div class="col col-md-5">
+												<label class="fieldlabels">Room size (optional): *</label>
+												<div class="row m-1">
+													<input type="text" name="email" class="col-2 col-md-3" value="0" />
+								               <select name="room_size" class="col-auto col-md">
+							                    	<option value="sq_meters">Square metres</option>
+							                    	<option value="sq_feet">Square feet</option>
+							                	</select>
+												</div>
+											</div>
+											<div class="col col-md">
+												<label class="fieldlabels">Base price per night: *</label>
+												<div class="row m-1">
+													<input class="col-3 col-md-4" value="$/per night" size="" disabled/>
+												   <input type="text" name="email" class="col-2 col-md-3" value="0.00" />
+													<span class="small_info">This is the lowest price that we automatically apply to this room for all dates. Before your property goes live, you can set seasonal pricing in your property dashboard.</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+
+							<input type="button" name="next" class="next action-button" value="Next" /> 
+							<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+						</fieldset>
+
+					<!-- Facilities & services -->
+						<fieldset>
+							<div class="form-card">
+								<div class="row hide">
+									<div class="col-7">
+										<h2 class="fs-title">Facilities & services:</h2>
+									</div>
+									<div class="col-5">
+										<h2 class="steps">Step 3 - 7</h2>
+									</div>
+								</div>
+
+								<div class="fieldset row hide">
+									<div class="col">
+										<fieldset>
+		               				<legend>Parking</legend>
+											<div class="row">
+												<div class="col co-md-12">
+													<label class="small_info">This information is especially important for those travelling to your accommodation by car.</label>
+													<label class="fieldlabels mt-2">Is parking available to guests?</label>
+													<div class="row">
+														<div class="col-4 col-md-6">
+															<select id="parking_available" name="parking_available">
+															    <option value="no">No</option>
+															    <option value="paid">Yes, paid</option>
+															    <option value="free">Yes, free</option>
+															</select>
+														</div>
+													</div>
+												</div>							
+											</div>
+
+											<div class="none" id="parking_Tabs_withPrice">
+												<div data_id="parking_all">
+													<div class="row">
+														<div class="col">
+															<div class="row">
+																<div class="col-4 col-md">
+																	<select id="parking_space" name="parking_space">
+																	    <option value="private">Private</option>
+																	    <option value="public">Public</option>
+																	</select>
+																</div>
+																<div class="col-4 col-md">
+																	<select id="parking_location" name="parking_location">
+																	    <option value="site">On site</option>
+																	    <option value="street">Off site</option>
+																	</select>
+																</div>
+															</div>
+														</div>							
+													</div>
+													<div class="row">
+														<div class="col">
+															<div class="row">
+																<div class="col-lg-7 col-md-12">
+																	<label class="fieldlabels">Do guests need to reserve a parking space?</label>
+																	<select id="parking_res" name="parking_res">
+																	    <option value="res_needed">Reservation needed</option>
+																	    <option value="no_res_needed">No reservation needed</option>
+																	</select>
+																</div>
+																<div class="col-lg col-md-12" data_id="parking_price">
+																	<label class="fieldlabels">Price for parking (per day)</label>
+																	<div class="row ml-0">
+																		<input class="col-3" value="$" size="" disabled/>
+																	   <input class="col-6" type="text" name=""  value="0" />
+																	</div>
+																</div>
+															</div>
+														</div>							
+													</div>
+												</div>
+											</div>
+
+											<div class="none" id="parking_Tabs_withoutPrice">
+												<div data_id="parking_all">
+													<div class="row">
+														<div class="col">
+															<div class="row">
+																<div class="col-4 col-md">
+																	<select id="parking_space" name="parking_space">
+																	    <option value="private">Private</option>
+																	    <option value="public">Public</option>
+																	</select>
+																</div>
+																<div class="col-4 col-md">
+																	<select id="parking_location" name="parking_location">
+																	    <option value="site">On site</option>
+																	    <option value="street">Off site</option>
+																	</select>
+																</div>
+															</div>
+														</div>							
+													</div>
+													<div class="row">
+														<div class="col">
+															<div class="row">
+																<div class="col-7 col-md-8">
+																	<label class="fieldlabels">Do guests need to reserve a parking space?</label>
+																	<select id="parking_res" name="parking_res">
+																	    <option value="res_needed">Reservation needed</option>
+																	    <option value="no_res_needed">No reservation needed</option>
+																	</select>
+																</div>
+															</div>
+														</div>							
+													</div>
+												</div>
+											</div>
+										</fieldset>								
+									</div>
+
+									<div class="col">
+										<fieldset>
+		               				<legend>Languages spoken</legend>
+											<div class="row">
+												<div class="col" id="productExtraBody2">													
+													<label class="fieldlabels">What languages do you or your staff speak?</label>
+													<div class="row">
+														<div class="col-6 col-md">
+															<select id="lang_spoken_by_staff" class="fieldlabels" name="staff_language">
+												            <option value="">Please select</option>
+												            <option value="en" selected="selected">English</option>
+												            <option value="bng">Bangla</option>
+												            <option value="chi">China</option>										            										            
+												        	</select>
+														</div>
+														<div class="col-6 col-md">
+															<button ype="button" id="addExtraField2" class="btn btn-primary">
+						                           	<i class="fa fa-plus"> &nbsp; Add another language</i>
+						                        	</button>
+				                        		</div>
+													</div>
+												</div>	
+											</div>
+										</fieldset>										
+									</div>
+								</div>
+
+								<div class="fieldset row">
+									<div class="col-6">
+										<fieldset>
+		               				<legend>Breakfast</legend>
+											<div class="row">
+												<div class="col">
+													<label class="fieldlabels">Is breakfast available to guests?</label>
+													<div class="row">
+														<div class="col-auto">
+															<select id="breakfast_included" name="breakfast_included">
+															    <option value="no">No</option>
+															    <option value="included">Yes, it's included in the price</option>
+															    <option value="optional">Yes, it's optional</option>
+															</select>
+														</div>
+													</div>
+												</div>							
+											</div>
+
+											<div class="none" id="breakfast_withPrice">
+												<div data_id="breakfast_all">
+													<div class="row">
+														<div class="col">
+															<div class="row">
+																<div class="col" data_id="parking_price">
+																	<label class="fieldlabels">Price for breakfast (per person, per day including all fees and taxes)</label>
+																	<div class="row ml-0">
+																		<input class="col-1 col-md-2" value="$" size="" disabled/>
+																	   <input class="col-2 col-md-4" type="text" name=""  value="0.00" />
+																	</div>
+																</div>
+															</div>
+														</div>							
+													</div>
+												</div>
+											</div>
+
+											<div class="none" id="breakfast_withItem">
+												<div data_id="breakfast_all" id="productExtraBody_Breakfast">
+													<div class="row">
+														<div class="col">
+															<label class="fieldlabels">What kind of breakfast is available?</label>
+															<div class="row">
+																<div class="col-auto">
+																	<select id="breakfast_type_0" name="breakfast_type">
+													               <option> Please select</option>
+													               <option>Continental</option>
+													               <option>American</option>
+													               <option>Buffet</option>
+													               <option>A la carte</option>
+													               <option>Italian</option>
+													               <option>Full English/Irish</option>
+													               <option>Vegetarian</option>
+													               <option>Vegan</option>
+													               <option>Halal</option>
+													               <option>Gluten-free</option>
+													               <option>Kosher</option>
+													               <option>Asian</option>
+													            </select>
+																</div>
+															</div>
+														</div>							
+													</div>
+												</div>
+												<div class="row">
+													<div class="col">
+														<button ype="button" id="addExtraField3" class="btn btn-info">
+					                           	<i class="fa fa-plus"> &nbsp; Add another breakfast type</i>
+					                        	</button>
+													</div>
+												</div>
+										</fieldset>										
+									</div>
+								</div>
+
+								<div class="fieldset row small_width">
+									<div class="col">								
+										<fieldset>
+		               				<legend>Facilities that are popular with guests</legend>
+											<div class="row">
+												<div class="col">
+													<span class="small_info">Guests look for these facilities the most when they're searching for properties.</span>
+													<div class="row mt-3 ml-2 justify-content-center">
+														<div class="col">
+															<h6>Facility Type</h6>
+															<ul>												
+																<li><input type="checkbox" name="" value="" id="abc"><label class="fieldlabels" for="abc"> &nbsp; Free WiFi</label></li>
+																<li><input type="checkbox" name="" value="" id="abc2"><label class="fieldlabels" for="abc2"> &nbsp; Restaurant</label></li>
+																<li><input type="checkbox" name="" value="" id="abc3"><label class="fieldlabels" for="abc3"> &nbsp; Room service</label></li>
+																<li><input type="checkbox" name="" value="" id="abc4"><label class="fieldlabels" for="abc4"> &nbsp; Bar</label></li>
+																<li><input type="checkbox" name="" value="" id="abc5"><label class="fieldlabels" for="abc5"> &nbsp; 24-hour front desk</label></li>
+																<li><input type="checkbox" name="" value="" id="abc6"><label class="fieldlabels" for="abc6"> &nbsp; Sauna</label></li>
+																<li><input type="checkbox" name="" value="" id="abc7"><label class="fieldlabels" for="abc7"> &nbsp; Fitness centre</label></li>
+																<li><input type="checkbox" name="" value="" id="abc8"><label class="fieldlabels" for="abc8"> &nbsp; Garden</label></li>
+																<li><input type="checkbox" name="" value="" id="abc9"><label class="fieldlabels" for="abc9"> &nbsp; Terrace</label></li>
+															</ul>
+														</div>
+														<div class="col">
+															<h6>Special facility</h6>
+															<ul>												
+																<li><input type="checkbox" name="" value="" id="a"><label class="fieldlabels" for="a"> &nbsp; Free WiFi</label></li>
+																<li><input type="checkbox" name="" value="" id="a2"><label class="fieldlabels" for="a2"> &nbsp; Restaurant</label></li>
+																<li><input type="checkbox" name="" value="" id="a3"><label class="fieldlabels" for="a3"> &nbsp; Room service</label></li>
+																<li><input type="checkbox" name="" value="" id="a4"><label class="fieldlabels" for="a4"> &nbsp; Bar</label></li>
+																<li><input type="checkbox" name="" value="" id="a5"><label class="fieldlabels" for="a5"> &nbsp; 24-hour front desk</label></li>
+																<li><input type="checkbox" name="" value="" id="a6"><label class="fieldlabels" for="a6"> &nbsp; Sauna</label></li>
+																<li><input type="checkbox" name="" value="" id="a7"><label class="fieldlabels" for="a7"> &nbsp; Fitness centre</label></li>
+																<li><input type="checkbox" name="" value="" id="a8"><label class="fieldlabels" for="a8"> &nbsp; Garden</label></li>
+																<li><input type="checkbox" name="" value="" id="a9"><label class="fieldlabels" for="a9"> &nbsp; Terrace</label></li>
+															</ul>
+														</div>
+														<div class="col">
+															<h6>Special facility 2</h6>
+															<ul>												
+																<li><input type="checkbox" name="" value="" id="b"><label class="fieldlabels" for="b"> &nbsp; Free WiFi</label></li>
+																<li><input type="checkbox" name="" value="" id="b2"><label class="fieldlabels" for="b2"> &nbsp; Restaurant</label></li>
+																<li><input type="checkbox" name="" value="" id="b3"><label class="fieldlabels" for="b3"> &nbsp; Room service</label></li>
+																<li><input type="checkbox" name="" value="" id="b4"><label class="fieldlabels" for="b4"> &nbsp; Bar</label></li>
+																<li><input type="checkbox" name="" value="" id="b5"><label class="fieldlabels" for="b5"> &nbsp; 24-hour front desk</label></li>
+																<li><input type="checkbox" name="" value="" id="b6"><label class="fieldlabels" for="b6"> &nbsp; Sauna</label></li>
+																<li><input type="checkbox" name="" value="" id="b7"><label class="fieldlabels" for="b7"> &nbsp; Fitness centre</label></li>
+																<li><input type="checkbox" name="" value="" id="b8"><label class="fieldlabels" for="b8"> &nbsp; Garden</label></li>
+																<li><input type="checkbox" name="" value="" id="b9"><label class="fieldlabels" for="b9"> &nbsp; Terrace</label></li>
+															</ul>
+														</div>
+														<div class="col">
+															<h6>Special facility 3</h6>
+															<ul>												
+																<li><input type="checkbox" name="" value="" id="c"><label class="fieldlabels" for="c"> &nbsp; Free WiFi</label></li>
+																<li><input type="checkbox" name="" value="" id="c2"><label class="fieldlabels" for="c2"> &nbsp; Restaurant</label></li>
+																<li><input type="checkbox" name="" value="" id="c3"><label class="fieldlabels" for="c3"> &nbsp; Room service</label></li>
+																<li><input type="checkbox" name="" value="" id="c4"><label class="fieldlabels" for="c4"> &nbsp; Bar</label></li>
+																<li><input type="checkbox" name="" value="" id="c5"><label class="fieldlabels" for="c5"> &nbsp; 24-hour front desk</label></li>
+																<li><input type="checkbox" name="" value="" id="c6"><label class="fieldlabels" for="c6"> &nbsp; Sauna</label></li>
+																<li><input type="checkbox" name="" value="" id="c7"><label class="fieldlabels" for="c7"> &nbsp; Fitness centre</label></li>
+																<li><input type="checkbox" name="" value="" id="c8"><label class="fieldlabels" for="c8"> &nbsp; Garden</label></li>
+																<li><input type="checkbox" name="" value="" id="c9"><label class="fieldlabels" for="c9"> &nbsp; Terrace</label></li>
+															</ul>
+														</div>		
+													</div>
+												</div>	
+											</div>
+										</fieldset>										
+									</div>
+								</div>
+
+							</div>
+							
+							<input type="button" name="next" class="next action-button" value="Next" /> 
+							<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+						</fieldset>
+
+					<!-- Amenities -->
+						<fieldset>
+							<div class="form-card small_width">
+								<div class="row">
+									<div class="col-7">
+										<h2 class="fs-title">Amenities:</h2>
+									</div>
+									<div class="col-5">
+										<h2 class="steps">Step 4 - 7</h2>
+									</div>
+								</div>
+
+								<p class="small_info">You are nearly done! We just need a few more details about the extra bed options you provide, plus any amenities or specific features and services available.</p>
+
+
+								<div class="fieldset row">
+									<div class="col">
+										<fieldset>
+		               				<legend>Extra bed options</legend>
+											<div class="row">
+												<div class="col-6">
+													<label class="fieldlabels">Can you provide extra beds?</label>
+			                                 <div class="radio-toolbar">
+															<div class="radio">
+					                              	<input type="radio" id="extraBedsVisiable" name="extra_beds_available" value="yes">
+					                              	<label for="extraBedsVisiable">Yes</label>	
+															</div>
+					                              
+					                              <div class="radio">
+			                                    	<input type="radio" id="extraBedsDisable" name="extra_beds_available" value="no" checked>
+			                                    	<label for="extraBedsDisable">No</label>
+					                              </div>
+			                                 </div>						       
+												</div>
+											</div>
+											<div class="row none" id="tabs">
+												<div class="col" data_id="extraBeds">
+													<label class="fieldlabels">Select the number of extra beds that can be added.</label>
+													<div class="row" >
+														<div class="col">
+															<select>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+															</select>
+														</div>
+													</div>
+													<label class="fieldlabels">Tick the box if you can accommodate the following guests in extra beds.</label>
+
+													<ul class="small_width">												
+														<li>
+															<input type="checkbox" name="" value="" id="childrenUp2">
+															<label class="fieldlabels" for="childrenUp2"> &nbsp; Children up to 2 years old in cots</label>
+															<div class="row none" id="tabs">
+																<div class="col small_width" data_id="childrenUp2">
+																	<span class="fieldlabels">Enter the price per night, per child</span>
+																	<input class="ml-2" value="$" size="1" disabled/>
+																   <input type="text" name="email" class="" value="0.00" size="2" />
+																</div>
+															</div>
+														</li>
+														<li>
+															<input type="checkbox" name="" value="" id="children">
+															<label class="fieldlabels" for="children"> &nbsp; Children</label>
+															<div class="row none" id="tabs">
+																<div class="col" data_id="children">
+																	<div class="row">
+																		<div class="col-4">
+																			<select id="extra_bed_children_max_age" name="extra_bed_children_max_age">
+																			    <option value="12">Up to 12 years old</option>
+																			    <option value="16">Up to 16 years old</option>
+																			    <option value="6">Up to 6 years old</option>
+																			</select>
+																		</div>
+																		<div class="col">
+																			<span class="fieldlabels mx-2">Enter the price per night, per child</span>
+																		</div>
+																		<div class="col-3">
+																			<div class="row">
+																				<input class="col-4" value="$" size="1" disabled/>
+																			   <input type="text" name="email" class="col-4" value="0.00" size="2" />
+																			</div>
+																		</div>												
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<input type="checkbox" name="" value="" id="adults">
+															<label class="fieldlabels" for="adults"> &nbsp; Adults</label>
+															<div class="row none" id="tabs">
+																<div class="col" data_id="adults">
+																	<span class="fieldlabels">Enter the price per night, per child</span>
+																	<input class="ml-2" value="$" size="1" disabled/>
+																   <input type="text" name="email" class="" value="0.00" size="2" />
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</fieldset>										
+									</div>
+								</div>
+
+								<div class="fieldset row small_width">
+									<div class="col">								
+										<fieldset>
+		               				<legend>Amenities</legend>
+											<div class="row ">
+												<div class="col">
+													<span class="small_info">Tell us about your amenities</span>
+													<div class="row m-3 border border-info">
+														<div class="col">
+															<h6 class="mt-2">Most requested by guests</h6>
+															<ul>												
+																<li><input type="checkbox" name="" value="" id="abc1"><label class="fieldlabels" for="abc1"> &nbsp; Free WiFi</label></li>
+																<li><input type="checkbox" name="" value="" id="abc21"><label class="fieldlabels" for="abc21"> &nbsp; Restaurant</label></li>
+																<li><input type="checkbox" name="" value="" id="abc31"><label class="fieldlabels" for="abc31"> &nbsp; Room service</label></li>
+																<li><input type="checkbox" name="" value="" id="abc41"><label class="fieldlabels" for="abc41"> &nbsp; Bar</label></li>
+																<li><input type="checkbox" name="" value="" id="abc51"><label class="fieldlabels" for="abc51"> &nbsp; 24-hour front desk</label></li>
+																<li><input type="checkbox" name="" value="" id="abc61"><label class="fieldlabels" for="abc61"> &nbsp; Sauna</label></li>
+																<li><input type="checkbox" name="" value="" id="abc71"><label class="fieldlabels" for="abc71"> &nbsp; Fitness centre</label></li>
+																<li><input type="checkbox" name="" value="" id="abc81"><label class="fieldlabels" for="abc81"> &nbsp; Garden</label></li>
+																<li><input type="checkbox" name="" value="" id="abc91"><label class="fieldlabels" for="abc91"> &nbsp; Terrace</label></li>
+															</ul>
+														</div>		
+													</div>
+
+													<div class="demo">
+												    	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+												        	
+												        	<div class="panel panel-default mx-3 row">
+												            <div class="panel-heading col-auto bg-info" role="tab" id="headingOne">
+												                <h3 class="panel-title">
+												                    <a role="button" data-toggle="collapse" class="text-light" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+												                        <i class="more-less glyphicon glyphicon-plus"></i>
+												                        Show all amenities
+												                    </a>
+												                </h3>
+												            </div>
+												        	</div>
+											            
+											            <div id="collapseOne" class="panel-collapse collapse mx-3 mt-4 " role="tabpanel" aria-labelledby="headingOne">
+											               <div class="panel-body">
+
+																	<div class="fieldset row">
+																		<div class="col">
+																			<fieldset>
+											               				<legend>All amenities by category</legend>
+																				<div class="row all_amenities">
+																					<div class="col mt-2 mx-2">
+																						     
+																		      		<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                        Room amenities
+																			                        <span class="float-right">Total Item: 28</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>
+																												<li><input type="checkbox" name="" value="" id="Clothes rack"><label class="fieldlabels" for="Clothes rack"> &nbsp;  Clothes rack </label></li>
+																												<li><input type="checkbox" name="" value="" id="Drying rack for clothing"><label class="fieldlabels" for="Drying rack for clothing"> &nbsp;  Drying rack for clothing </label></li>
+																												<li><input type="checkbox" name="" value="" id="Fold-up bed"><label class="fieldlabels" for="Fold-up bed"> &nbsp;  Fold-up bed </label></li>
+																												<li><input type="checkbox" name="" value="" id="Sofa bed"><label class="fieldlabels" for="Sofa bed"> &nbsp;  Sofa bed </label></li>
+																												<li><input type="checkbox" name="" value="" id="Air conditioning"><label class="fieldlabels" for="Air conditioning"> &nbsp;  Air conditioning </label></li>
+																												<li><input type="checkbox" name="" value="" id="Wardrobe or closet"><label class="fieldlabels" for="Wardrobe or closet"> &nbsp;  Wardrobe or closet </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Carpeted"><label class="fieldlabels" for="Carpeted"> &nbsp; Carpeted </label></li>
+																												<li><input type="checkbox" name="" value="" id="Dressing room"><label class="fieldlabels" for="Dressing room"> &nbsp;  Dressing room </label></li>
+																												<li><input type="checkbox" name="" value="" id="Extra long beds"><label class="fieldlabels" for="Extra long beds"> &nbsp;  Extra long beds (> 2 metres) </label></li>
+																												<li><input type="checkbox" name="" value="" id="Fan"><label class="fieldlabels" for="Fan"> &nbsp;  Fan </label></li>
+																												<li><input type="checkbox" name="" value="" id="Fireplace"><label class="fieldlabels" for="Fireplace"> &nbsp;  Fireplace </label></li>
+																												<li><input type="checkbox" name="" value="" id="Heating"><label class="fieldlabels" for="Heating"> &nbsp;  Heating </label></li>
+																												<li><input type="checkbox" name="" value="" id="Interconnected room"><label class="fieldlabels" for="Interconnected room"> &nbsp;  Interconnected room(s) available </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Iron"><label class="fieldlabels" for="Iron"> &nbsp; Iron </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Ironing facilities"><label class="fieldlabels" for="Ironing facilities"> &nbsp; Ironing facilities </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Mosquito net"><label class="fieldlabels" for="Mosquito net"> &nbsp; Mosquito net </label></li>
+																												<li><input type="checkbox" name="" value="" id="Private entrance"><label class="fieldlabels" for="Private entrance"> &nbsp;  Private entrance </label></li>
+																												<li><input type="checkbox" name="" value="" id="Safety deposit box"><label class="fieldlabels" for="Safety deposit box"> &nbsp;  Safety deposit box </label></li>
+																												<li><input type="checkbox" name="" value="" id="Sofa"><label class="fieldlabels" for="Sofa"> &nbsp;  Sofa </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Soundproofing"><label class="fieldlabels" for="Soundproofing"> &nbsp; Soundproofing </label></li>
+																												<li><input type="checkbox" name="" value="" id="Seating Area"><label class="fieldlabels" for="Seating Area"> &nbsp;  Seating Area </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Tile/marble floor"><label class="fieldlabels" for="Tile/marble floor"> &nbsp; Tile/marble floor </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Pants press"><label class="fieldlabels" for="Pants press"> &nbsp; Pants press </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Hardwood or parquet floors"><label class="fieldlabels" for="Hardwood or parquet floors"> &nbsp; Hardwood or parquet floors </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Desk"><label class="fieldlabels" for="Desk"> &nbsp; Desk </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Hypoallergenic"><label class="fieldlabels" for="Hypoallergenic"> &nbsp; Hypoallergenic </label></li>
+																												 <li><input type="checkbox" name="" value="" id="Cleaning products"><label class="fieldlabels" for="Cleaning products"> &nbsp; Cleaning products </label></li>
+																												<li><input type="checkbox" name="" value="" id="Electric blankets"><label class="fieldlabels" for="Electric blankets"> &nbsp;  Electric blankets </label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                        Bathroom
+																			                        <span class="float-right">Total Item: 13</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>		
+																											 	<li><input type="checkbox" name="" value="" id="Toilet"><label class="fieldlabels" for="Toilet"> &nbsp; Toilet paper </label></li>
+																											 	<li><input type="checkbox" name="" value="" id="Bath"><label class="fieldlabels" for="Bath"> &nbsp; Bath </label></li>
+																												<li><input type="checkbox" name="" value="" id="Bidet"><label class="fieldlabels" for="Bidet"> &nbsp;  Bidet </label></li>
+																												<li><input type="checkbox" name="" value="" id="shower"><label class="fieldlabels" for="shower"> &nbsp;  Bath or shower </label></li>
+																												<li><input type="checkbox" name="" value="" id="Bathrobe"><label class="fieldlabels" for="Bathrobe"> &nbsp;  Bathrobe </label></li>
+																												<li><input type="checkbox" name="" value="" id="Private"><label class="fieldlabels" for="Private"> &nbsp;  Private bathroom </label></li>
+																												<li><input type="checkbox" name="" value="" id="toiletries"><label class="fieldlabels" for="toiletries"> &nbsp;  Free toiletries </label></li>
+																												<li><input type="checkbox" name="" value="" id="Hairdryer"><label class="fieldlabels" for="Hairdryer"> &nbsp;  Hairdryer </label></li>
+																												<li><input type="checkbox" name="" value="" id=" Spa bath"><label class="fieldlabels" for=" Spa bath"> &nbsp;  Spa bath </label></li>
+																												<li><input type="checkbox" name="" value="" id="Shared bathroom"><label class="fieldlabels" for="Shared bathroom"> &nbsp;  Shared bathroom </label></li>
+																												<li><input type="checkbox" name="" value="" id="Shower"><label class="fieldlabels" for="Shower"> &nbsp;  Shower </label></li>
+																											 	<li><input type="checkbox" name="" value="" id="Slippers"><label class="fieldlabels" for="Slippers"> &nbsp; Slippers </label></li>
+																											 	<li><input type="checkbox" name="" value="" id="Toilet"><label class="fieldlabels" for="Toilet"> &nbsp; Toilet </label></li>
+																																																						</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                        Media & technology
+																			                        <span class="float-right">Total Item: 23</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp;Computer </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Game console </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Game console – Nintendo Wii </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Game console – PS2 </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Game console – PS3 </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Game console – Xbox 360 </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Laptop </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; iPad </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Cable channels </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; CD player </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; DVD player </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Fax </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; iPod dock </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Laptop safe </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Flat-screen TV </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Pay-per-view channels </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Radio </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Satellite channels </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Telephone </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; TV </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Video </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Video games </label></li>
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Blu-ray player </label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                        Food & drink0/16 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Food & drink0/16 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Services & extras0/7 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Services & extras0/7 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Outdoor & view0/12 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Outdoor & view0/12 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Layout0/0 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Layout0/0 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Accessibility0/5 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; </label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Entertainment and family services0/4 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Entertainment and family services0/4 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Bath/Hot spring0/0 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Bath/Hot spring0/0 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Safety & security0/0 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Safety & security0/0 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Safety features0/0 selected
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Safety features0/0 selected</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Physical distancing0/0 selected
+
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Physical distancing0/0 selected</label></li>
+																											</ul>
+
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+
+																			        	<div class="panel panel-default">
+																			            <div class="panel-heading" role="tab" id="headingTwo">
+																			                <h4 class="panel-title">
+																			                    <a class="collapsed" role="button" class="text-light" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" aria-controls="collapseTwo">
+																			                        <i class="more-less glyphicon glyphicon-plus"></i>
+																			                       Cleanliness & disinfecting
+																			                        <span class="float-right">Total Item: 1</span>
+																			                    </a>
+																			                </h4>
+																			            </div>
+																			            <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			                <div class="panel-body">
+																			                	<div class="row m-3">
+																										<div class="col">
+																											<ul>												
+																												<li><input type="checkbox" name="" value="" id=""><label class="fieldlabels" for=""> &nbsp; Cleanliness & disinfecting</label></li>
+																											</ul>
+																										</div>		
+																									</div>
+																			                </div>
+																			            </div>
+																			        	</div>
+																					</div>
+																				</div>	
+																			</fieldset>										
+																		</div>
+																	</div>
+											                	
+											               </div>
+											            </div>
+
+												    	</div>
+													</div>
+
+												</div>	
+											</div>
+										</fieldset>										
+									</div>
+								</div>
+
+							</div>
+							
+							<input type="button" name="next" class="next action-button" value="Next" /> 
+							<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+						</fieldset>
+
+					<!-- Photos -->
+						<fieldset>
+							<div class="form-card">
+								<div class="row">
+									<div class="col-7">
+										<h2 class="fs-title">Property photos:</h2>
+									</div>
+									<div class="col-5">
+										<h2 class="steps">Step 5 - 7</h2>
+									</div>
+								</div>
+								<p class="small_info">
+									Great photos invite guests to get the full experience of your property, so upload some high-resolution photos that represent all your property has to offer. We will display these photos on your property's page on the Chutyrooms.com website.
+								</p>
+
+								<div class="fieldset row">
+									<div class="col">
+										<fieldset>
+		               				<legend>Photo gallery</legend>
+		               					<div class="m-2">					
+													<p class="imagePage p-2 border border-primary">Great, thanks! You can now continue signing up. To increase your chances of getting more bookings, make sure to add additional photos later on - once you're up and running. </p>
+
+													<div class="m-3">
+														<div class="row" id="image_preview">
+														</div>
+
+														<div class="row mt-2 justify-content-center">
+															<div class="col">
+															   <input type="file" id="images" name="images[]" onchange="preview_images();" multiple/>
+															</div>
+															<div class="col">
+															   <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Multiple Image"/>
+															</div>													
+														</div>													
+													</div>
+												</div>
+
+												<!-- Another Image Upload Source
+												<div class="m-2">
+													<link href="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.css" rel="stylesheet">
+													
+													<div id="drag-drop-area"></div>
+													<script src="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.js"></script>
+												    <script>
+												      var uppy = Uppy.Core()
+												        .use(Uppy.Dashboard, {
+												          inline: true,
+												          target: '#drag-drop-area'
+												        })
+												        .use(Uppy.Tus, {endpoint: 'https://master.tus.io/files/'}) //you can put upload URL here, where you want to upload images
+												 
+												      uppy.on('complete', (result) => {
+												        console.log('Upload complete! We’ve uploaded these files:', result.successful)
+												      })
+												    </script>													
+												</div> -->
+
+										</fieldset>										
+									</div>
+								</div>
+							</div>
+							
+							<input type="button" name="next" class="next action-button" value="Next" /> 
+							<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+						</fieldset>
+					
+					<!-- Policies -->
+						<fieldset id="policies">
+							<div class="form-card">
+								<div class="row hide">
+									<div class="col-7">
+										<h2 class="fs-title">Policies:</h2>
+									</div>
+									<div class="col-5">
+										<h2 class="steps">Step 6 - 7</h2>
+									</div>
+								</div>
+								<span class="small_info">Specify some basic policies. Do you allow children or pets? How flexible are you with cancellations?</span>
+
+								<div class="fieldset row mt-3">
+									<div class="col">
+										<fieldset>
+		               				<legend>Cancellations</legend>
+											<div class="row">
+												<div class="col col-md-7">
+													<label class="fieldlabels">How many days in advance can guests cancel free of charge?</label>
+													<div class="row">
+														<div class="col-6 col-md-8">
+															<select id="cancel_free_days_prior" name="cancel_free_days_prior" class="fieldlabels">
+															    <option value="0">Day of arrival (18:00)</option>
+															    <option value="1">1 day</option>
+															    <option value="2">2 days</option>
+															    <option value="3">3 days</option>
+															    <option value="7">7 days</option>
+															    <option value="14">14 days</option>
+															</select>
+														</div>
+													</div>
+												</div>	
+												<div class="col col-md">
+													<label class="fieldlabels">or guests will pay 100%</label>
+													<div class="row">
+														<div class="col-6 col-md-10">
+															<select id="cancel_guest_payment" name="cancel_guest_payment" class="fieldlabels">
+															    <option value="first_night">of the first night</option>
+															    <option value="full_stay">of the full stay</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<label class="small_info">
+												The guest must cancel 1 day in advance or pay 100% of the price for the first night. <br>
+												<b>Please note: You'll be able to make changes to your policies later on. This is just to get you started.</b>
+											</label>
+										</fieldset>										
+									</div>
+								</div>
+
+								<div class="fieldset row mt-3">
+									<div class="col">
+										<fieldset>
+											<div class="row">
+												<div class="col mt-2">
+													<label class="fieldlabels"><b>Protect against accidental bookings</b></label>
+													<div class="float-right">
+														<div class="custom-control custom-switch">
+														  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+														  <label class="custom-control-label" for="customSwitch1">Yes</label>
+														</div>
+													</div>
+												</div>												
+											</div>
+
+											<label class="small_info">
+												To save you time handling accidental bookings, we automatically waive cancellation fees for guests that cancel within the first 24 hours of a booking being made. You can change this period of time later in your property management platform.	
+											</label>
+											<hr>
+											<div class="row">
+												<div class="col">
+													<div class="fieldset">
+														<fieldset>
+						               				<legend>Check-in</legend>
+																<label class="fieldlabels">From:</label>
+																<div class="radio-toolbar">
+																	<div class="radio">
+							                              	<input type="radio" id="a34" name="checkin_start_preset" value="12:00" checked>
+							                              	<label for="a34">12:00</label>																
+																	</div>
+							                              
+							                              <div class="radio">
+					                                    	<input type="radio" id="b34" name="checkin_start_preset" value="14:00">
+					                                    	<label for="b34">14:00</label>					                              	
+							                              </div>
+																   
+					                                    <div class="radio">
+					                                    	<input type="radio" id="c34" name="checkin_start_preset" value="15:00">
+					                                    	<label for="c34">15:00</label>			                                    	
+					                                    </div>
+					                                    
+					                                    <div class="radio" type="radio">
+			                             						<select class="form-control" id="checkin_start" name="checkin_start">
+																   	 	<option disabled="disabled" value="" selected="">Other</option>
+																    		<option value="07:00"> 07:00</option>
+																    		<option value="07:30"> 07:30 </option>
+																    		<option value="08:00"> 08:00 </option>
+																    		<option value="08:30"> 08:30 </option>
+																    		<option value="09:00"> 09:00 </option>
+																    		<option value="09:30"> 09:30 </option>
+																    		<option value="10:00"> 10:00 </option>
+																    		<option value="10:30"> 10:30 </option>
+																    		<option value="11:00"> 11:00 </option>
+																    		<option value="11:30"> 11:30 </option>
+																    		<option value="12:00"> 12:00 </option>
+																    		<option value="12:30"> 12:30 </option>
+																    		<option value="13:00"> 13:00 </option>
+																    		<option value="13:30"> 13:30 </option>
+																    		<option value="14:00"> 14:00 </option>
+																    		<option value="14:30"> 14:30 </option>
+																    		<option value="15:00"> 15:00 </option>
+																    		<option value="15:30"> 15:30 </option>
+																    		<option value="16:00"> 16:00 </option>
+																    		<option value="16:30"> 16:30 </option>
+																    		<option value="17:00"> 17:00 </option>
+																    		<option value="17:30"> 17:30 </option>
+																    		<option value="18:00"> 18:00 </option>
+																    		<option value="18:30"> 18:30 </option>
+																    		<option value="19:00"> 19:00 </option>
+																    		<option value="19:30"> 19:30 </option>
+																    		<option value="20:00"> 20:00 </option>
+																		</select>
+					                                    </div>
+																</div>
+
+																<label class="fieldlabels">To:</label>
+																<div class="radio-toolbar">
+																	<div class="radio">
+							                              	<input type="radio" id="d" name="checkin_end_preset" value="12:00" checked>
+							                              	<label for="d">12:00</label>																
+																	</div>
+							                              
+							                              <div class="radio">
+					                                    	<input type="radio" id="e" name="checkin_end_preset" value="22:00">
+					                                    	<label for="e">22:00</label>					                              	
+							                              </div>
+																   
+					                                    <div class="radio">
+					                                    	<input type="radio" id="f" name="checkin_end_preset" value="00:00">
+					                                    	<label for="f">00:00</label>			                                    	
+					                                    </div>
+					                                    
+					                                    <div class="radio">			                             						
+																		<select class="form-control " id="checkin_end" name="checkin_end">
+																		    <option disabled="disabled" value="" selected=""> Other </option>
+																		    <option value="12:00"> 12:00 </option>
+																		    <option value="12:30"> 12:30 </option>
+																		    <option value="13:00"> 13:00 </option>
+																		    <option value="13:30"> 13:30 </option>
+																		    <option value="14:00"> 14:00 </option>
+																		    <option value="14:30"> 14:30 </option>
+																		    <option value="15:00"> 15:00 </option>
+																		    <option value="15:30"> 15:30 </option>
+																		    <option value="16:00"> 16:00 </option>
+																		    <option value="16:30"> 16:30 </option>
+																		    <option value="17:00"> 17:00 </option>
+																		    <option value="17:30"> 17:30 </option>
+																		    <option value="18:00"> 18:00 </option>
+																		    <option value="18:30"> 18:30 </option>
+																		    <option value="19:00"> 19:00 </option>
+																		    <option value="19:30"> 19:30 </option>
+																		    <option value="20:00"> 20:00 </option>
+																		    <option value="20:30"> 20:30 </option>
+																		    <option value="21:00"> 21:00 </option>
+																		    <option value="21:30"> 21:30 </option>
+																		    <option value="22:00"> 22:00 </option>
+																		    <option value="22:30"> 22:30 </option>
+																		    <option value="23:00"> 23:00 </option>
+																		    <option value="23:30"> 23:30 </option>
+																		    <option value="00:00"> 00:00 </option>
+																		</select>
+					                                    </div>
+																</div>
+														</fieldset>										
+													</div>
+												</div>
+
+												<div class="col">
+													<div class="fieldset">
+														<fieldset>
+						               				<legend>Check-out</legend>
+																<label class="fieldlabels">from (optional):</label>
+																<div class="radio-toolbar">
+																	<div class="radio">
+							                              	<input type="radio" id="a1" name="checkout_start_preset" value="00:00" checked>
+							                              	<label for="a1">00:00</label>																
+																	</div>
+							                              
+							                              <div class="radio">
+					                                    	<input type="radio" id="b1" name="checkout_start_preset" value="10:00">
+					                                    	<label for="b1">10:00</label>					                              	
+							                              </div>
+																   
+					                                    <div class="radio">
+					                                    	<input type="radio" id="c1" name="checkout_start_preset" value="12:00">
+					                                    	<label for="c1">12:00</label>			                                    	
+					                                    </div>
+					                                    
+					                                    <div class="radio">
+			                             						<select class="form-control " id="checkout_start" name="checkout_start">
+																		    <option disabled="disabled" value="" selected=""> Other </option>
+																		    <option value="00:00"> 00:00 </option>
+																		    <option value="00:30"> 00:30 </option>
+																		    <option value="01:00"> 01:00 </option>
+																		    <option value="01:30"> 01:30 </option>
+																		    <option value="02:00"> 02:00 </option>
+																		    <option value="02:30"> 02:30 </option>
+																		    <option value="03:00"> 03:00 </option>
+																		    <option value="03:30"> 03:30 </option>
+																		    <option value="04:00"> 04:00 </option>
+																		    <option value="04:30"> 04:30 </option>
+																		    <option value="05:00"> 05:00 </option>
+																		    <option value="05:30"> 05:30 </option>
+																		    <option value="06:00"> 06:00 </option>
+																		    <option value="06:30"> 06:30 </option>
+																		    <option value="07:00"> 07:00 </option>
+																		    <option value="07:30"> 07:30 </option>
+																		    <option value="08:00"> 08:00 </option>
+																		    <option value="08:30"> 08:30 </option>
+																		    <option value="09:00"> 09:00 </option>
+																		    <option value="09:30"> 09:30 </option>
+																		    <option value="10:00"> 10:00 </option>
+																		    <option value="10:30"> 10:30 </option>
+																		    <option value="11:00"> 11:00 </option>
+																		    <option value="11:30"> 11:30 </option>
+																		    <option value="12:00"> 12:00 </option>
+																		    <option value="12:30"> 12:30 </option>
+																		    <option value="13:00"> 13:00 </option>
+																		    <option value="13:30"> 13:30 </option>
+																		    <option value="14:00"> 14:00 </option>
+																		</select>
+					                                    </div>
+																</div>
+																																
+																<label class="fieldlabels">To:</label>
+																<div class="radio-toolbar">
+																	<div class="radio">
+							                              	<input type="radio" id="d2" name="checkout_end_preset" value="10:00" checked>
+							                              	<label for="d2">10:00</label>																
+																	</div>
+							                              
+							                              <div class="radio">
+					                                    	<input type="radio" id="e2" name="checkout_end_preset" value="11:00">
+					                                    	<label for="e2">11:00</label>					                              	
+							                              </div>
+																   
+					                                    <div class="radio">
+					                                    	<input type="radio" id="f2" name="checkout_end_preset" value="12:00">
+					                                    	<label for="f2">12:00</label>			                                    	
+					                                    </div>
+					                                    
+					                                    <div class="radio">	                             						
+																		<select class="form-control " id="checkout_end" name="checkout_end">
+																		    <option disabled="disabled" value="" selected=""> Other </option>
+																		    <option value="07:00"> 07:00 </option>
+																		    <option value="07:30"> 07:30 </option>
+																		    <option value="08:00"> 08:00 </option>
+																		    <option value="08:30"> 08:30 </option>
+																		    <option value="09:00"> 09:00 </option>
+																		    <option value="09:30"> 09:30 </option>
+																		    <option value="10:00"> 10:00 </option>
+																		    <option value="10:30"> 10:30 </option>
+																		    <option value="11:00"> 11:00 </option>
+																		    <option value="11:30"> 11:30 </option>
+																		    <option value="12:00"> 12:00 </option>
+																		    <option value="12:30"> 12:30 </option>
+																		    <option value="13:00"> 13:00 </option>
+																		    <option value="13:30"> 13:30 </option>
+																		    <option value="14:00"> 14:00 </option>
+																		    <option value="14:30"> 14:30 </option>
+																		    <option value="15:00"> 15:00 </option>
+																		    <option value="15:30"> 15:30 </option>
+																		    <option value="16:00"> 16:00 </option>
+																		    <option value="16:30"> 16:30 </option>
+																		    <option value="17:00"> 17:00 </option>
+																		    <option value="17:30"> 17:30 </option>
+																		    <option value="18:00"> 18:00 </option>
+																		    <option value="18:30"> 18:30 </option>
+																		    <option value="19:00"> 19:00 </option>
+																		    <option value="19:30"> 19:30 </option>
+																		    <option value="20:00"> 20:00 </option>
+																		</select>
+					                                    </div>
+																</div>
+														</fieldset>										
+													</div>
+												</div>
+											</div>
+										</fieldset>										
+									</div>
+								</div>
+
+								<div class="fieldset row mt-3">
+									<div class="col">
+										<fieldset>	
+											<legend>Children</legend>
+											<div class="row">
+												<div class="col">
+													<label class="fieldlabels">Can you accommodate children? (You can specify the ages and prices later)</label>
+
+													<div class="radio-toolbar">
+														<div class="radio">
+				                              	<input type="radio" id="a39" name="children" value="Yes" checked>
+				                              	<label for="a39">Yes</label>																
+														</div>
+				                              
+				                              <div class="radio">
+		                                    	<input type="radio" id="b39" name="children" value="No">
+		                                    	<label for="b39">No</label>					                              	
+				                              </div>
+				                           </div>												
+												</div>												
+											</div>
+										</fieldset>
+									</div>
+									<div class="col small_width">
+										<fieldset>	
+											<legend>Pets</legend>
+											<div class="row">
+												<div class="col">
+													<label class="small_info">Some guests like to travel with their furry friends.Some guests like to travel with their furry friends. Indicate if you allow pets and if any charges apply.</label>
+													<div class="row">
+														<div class="col-5 col-md">
+															<label class="fieldlabels">Do you allow pets?</label>
+															<div class="row">
+																<div class="col">																
+																	<select id="pets_allowed" name="pets_allowed">
+																	    <option value="no">No</option>
+																	    <option value="yes">Yes</option>
+																	    <option value="request">Upon request</option>
+																	</select>
+																</div>															
+															</div>
+														</div>
+														<div class="none" id="pets_allowed_Tabs">
+															<div class="col" data_id="pets_allowed">
+																<label class="fieldlabels">Are there additional charges for pets?</label>
+																<div class="row">
+																	<div class="col">																
+																		<select id="pets_fee" name="pets_fee">
+																		    <option value="free">Pets can stay for free</option>
+																		    <option value="paid">Charges may apply</option>
+																		</select>
+																	</div>															
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>												
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+							
+							<input type="button" name="next" class="next action-button" value="Next" /> 
+							<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+						</fieldset>
+					
+					<!-- Payments -->
+						<fieldset>
+							<div class="form-card">
+								<div class="row hide">
+									<div class="col-7">
+										<h2 class="fs-title">Payments:</h2>
+									</div>
+									<div class="col-5">
+										<h2 class="steps">Step 7 - 7</h2>
+									</div>
+								</div>
+								<span class="small_info">Specify the types of payment you accept, tax details and other options like additional charges.</span>
+
+								<div class="fieldset row mt-3 hide">
+									<div class="col">
+										<fieldset>
+		               				<legend>Guest payment options</legend>
+		               				<div class="row">
+												<div class="col">
+												<label class="fieldlabels">Can you charge credit cards at the property?</label>
+		                                 <div class="radio-toolbar">
+														<div class="radio">
+				                              	<input type="radio" id="paymentVisiable" name="guestPayment" value="yes" >
+														</div>
+				                              <div class="radio">
+		                                    	<input type="radio" id="paymentDisable" name="guestPayment" value="no" checked>
+				                              </div>
+		                                 </div>						       
+												</div>
+											</div>
+											<div class="row m-3 small_width none" id="tabs">
+												<div class="col" data_id="3">
+													<ul>												
+														<li><input type="checkbox" name="" value="" id="abc"><label class="fieldlabels" for="abc"> &nbsp; [Logo] American Express</label></li>
+														<li><input type="checkbox" name="" value="" id="abc2"><label class="fieldlabels" for="abc2"> &nbsp; [Logo] Visa</label></li>
+														<li><input type="checkbox" name="" value="" id="abc3"><label class="fieldlabels" for="abc3"> &nbsp; [Logo] Euro/Mastercard</label></li>
+														<li><input type="checkbox" name="" value="" id="abc4"><label class="fieldlabels" for="abc4"> &nbsp; [Logo] Diners Club</label></li>
+														<li><input type="checkbox" name="" value="" id="abc5"><label class="fieldlabels" for="abc5"> &nbsp; [Logo] JCB</label></li>
+														<li><input type="checkbox" name="" value="" id="abc6"><label class="fieldlabels" for="abc6"> &nbsp; [Logo] Maestro</label></li>
+														<li><input type="checkbox" name="" value="" id="abc7"><label class="fieldlabels" for="abc7"> &nbsp;[Logo] Discover </label></li>
+														<li><input type="checkbox" name="" value="" id="abc8"><label class="fieldlabels" for="abc8"> &nbsp; [Logo] UnionPay credit card</label></li>
+													</ul>
+												</div>		
+											</div>
+
+											<div id="tabs">
+												<fieldset data_id="4">
+			               					<legend>No problem! Allow your guests to pay online</legend>	
+			               					<label class="fieldlabels">You can have guests pay via Payments by Chutyrooms.com. Here's how it works:</label>
+			               					<div class="row my-4">
+			               						<div class="col">
+			               							<p class="text-center"><img src="images/1st.svg"></p>
+			               							
+		               								<ul>
+		               									<li> <b>1. Customer books </b>
+		               									</li><br>
+		               									<li>
+		               										A Chutyrooms.com customer makes a reservation for your property using their preferred payment method.
+		               									</li>
+		               								</ul>
+			               						</div>
+			               						<div class="col">
+			               							<p class="text-center"><img src="images/2nd.svg"></p>
+		               								<ul>
+		               									<li><b>2. Chutyrooms.com facilitates your payment </b> 
+		               									</li><br>
+		               									<li>
+		               										The guest is charged on your behalf according to your policies, and we make sure they've paid in full before they arrive at your property.
+		               									</li>
+		               								</ul>
+			               						</div>
+			               						<div class="col">
+			               							<p class="text-center"><img src="images/3rd.svg"></p>
+		               								<ul>
+		               									<li><b>3. You get paid </b>
+		               									</li> <br>
+		               									<li>After your guest checks out you'll be paid by bank transfer within 7 working days.</li>
+		               								</ul>
+			               						</div>
+			               					</div>
+			               				</fieldset>
+			               			</div>
+
+										</fieldset>										
+									</div>
+								</div>
+
+								<div class="fieldset small_width">
+									<fieldset>	
+										<legend>Commission payments</legend>
+										<div class="row">
+											<div class="col">
+												<label class="small_info">Some guests like to travel with their furry friends.Some guests like to travel with their furry friends. Indicate if you allow pets and if any charges apply.</label>
+												<div class="row">
+													<div class="col">
+														<label class="fieldlabels">What name should be placed on the invoice (e.g. legal/company name)?</label>
+														<div class="float-right">
+															<p>Commission percentage:</p>
+															<h2 class="float-right">15%</h2>
+														</div>
+														<div class="row">
+															<div class="col">																
+																<select id="pets_allowed" name="pets_allowed">
+																    <option value="no">Manager Name</option>
+																    <option value="yes">Hotel Name</option>
+																    <option value="request">Legal company name (please specify)</option>
+																</select>
+															</div>															
+														</div>
+													</div>
+												</div>
+											</div>												
+										</div>
+									</fieldset>
+								</div>
+
+								<div class="fieldset small_width">
+									<fieldset>
+										<legend>Please tell us your licence number</legend>
+										<div class="row">
+											<div class="col">
+												<div class="row">
+													<div class="col">
+														<label class="small_info">According to the local short term rental regulations, furnished touristic accommodations must provide their license or registration number. For more information about local regulations applicable in your city or region visit: this link.</label>
+														<div class="row">
+															<div class="col">																
+																<select id="variant" name="variant" aria-describedby="kk112kk3" data-selected="28">
+																	<option value="28">Special Operating Logo (ESL - MHTE) or Notify Business Number (MAG)</option>
+																	<option value="290">My property has an exception</option>
+																	<option value="27">Property Registration Number (A.M.A.)</option>
+																</select>
+															</div>															
+														</div>
+														<div class="" id="licenseNumber_Tabs">
+															<div class="row small_width" data_id="licenseNumber">
+																<div class="col">
+																	<label class="fieldlabels">What is your license number?</label>	
+																	<div class="row">
+																		<div class="col">
+																			<input type="" name="" placeholder="">
+																		</div>
+																	</div>
+																</div>															
+															</div>															
+														</div>
+														<div class="none" id="exceptionReason_Tabs">
+															<div class="row small_width" data_id="exceptionReason">
+																<div class="col">
+																	<label class="fieldlabels">Please specify the exception reason:</label>	
+																	<div class="row">
+																		<div class="col">
+																			<select>
+																				<option value="leasing">Leasing</option>
+																				<option value="public_state_property">Public state property</option>
+																				<option value="mt_athos">Mt Athos monastery property</option>
+																				<option value="right_habitation">Right of habitation</option>
+																				<option value="trailer_mobile_home">Trailer/mobile home</option>
+																				<option value="boat">Boat</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>															
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>												
+										</div>
+									</fieldset>
+								</div>
+								<div class="fieldset small_width">
+									<fieldset>	
+										<legend>You're almost done - just a few final things to consider</legend>
+											<label class="fieldlabels">Your availability to guests</label>
+											<div class="row">
+												<div class="col">
+													<label class="small_info">To help you start earning, we automatically make your property open for bookings for the next 18 months. If you would like to make changes to your availability before opening, you can choose 'complete registration and open later'. Your availability can also be adjusted after you open for bookings.</label>
+													<label class="fieldlabels">To complete your registration, please tick the boxes below:</label>
+													<div class="small_width m-2">
+														<ul>												
+															<li><input type="checkbox" name="" value="" id="123">
+																<label class="fieldlabels" for="123"> &nbsp;
+																	I certify that this is a legitimate accommodation business with all necessary licenses and permits , which can be shown upon first request. Chutyrooms.com B.V. reserves the right to verify and investigate any details provided in this registration.
+																</label>
+															</li>
+															<li><input type="checkbox" name="" value="" id="147">
+																<label class="fieldlabels" for="147"> &nbsp; 
+																	I have read, accepted and agreed to the General Delivery Terms and Privacy Statement.
+																</label>
+															</li>	
+														</ul>	
+													</div>			
+												</div>												
+										</div>
+											<label class="small_info">Chutyrooms.com enables accommodations and guests to communicate through Chutyrooms.com, which receives and processes communications in accordance with the Chutyrooms.com Privacy Statement and General Delivery Terms.</label>
+									</fieldset>
+								</div>
+							</div>
+							
+							<input type="button" name="next" class="next action-button" value="Submit" /> 
+						</fieldset>
+					
+					<!-- Finish -->
+						<fieldset id="fieldset">
+							<div class="form-card">
+								<div class="row">
+									<div class="col-7">
+										<h2 class="fs-title">Finish:</h2>
+									</div>
+									<div class="col-5">
+										<h2 class="steps">Complete</h2>
+									</div>
+								</div> <br><br>
+								<h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+								<div class="row justify-content-center">
+									<div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+								</div> <br><br>
+								<div class="row justify-content-center">
+									<div class="col-7 text-center">
+										<h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script src="script.js"></script>
+
+	
+
+  
+
+   
+
+
+	<!-- Show all amenities -->
+   	<script type="text/javascript">
+	   	function toggleIcon(e) {
+			  $(e.target)
+			    .prev(".panel-heading")
+			    .find(".more-less")
+			    .toggleClass("glyphicon-plus glyphicon-minus");
+			}
+			$(".panel-group").on("hidden.bs.collapse", toggleIcon);
+			$(".panel-group").on("shown.bs.collapse", toggleIcon);
+   	</script>
+
+   <!-- Basic Info -->
+   	<script type="text/javascript">
+	     	$(function () {
+	         $("#managerDisable").click(function () {
+	            var chkFormationDept = document.getElementById("managerDisable").checked;
+	            if (chkFormationDept) {
+	               $('#tabs [data_id="2"]').parent().removeClass('active').css('display', 'none');
+	            }
+	         })							    
+	         $("#managerVisiable").click(function () {
+	             var chkFormationDept = document.getElementById("managerVisiable").checked;
+	             if (chkFormationDept) {
+	                 $('#tabs [data_id="2"]').parent().removeClass('active').css('display', 'block');
+	             }
+	         })
+	       })
+
+	     	$(function () {
+	         $("#multipleHotels").click(function () {
+	            var chkFormationDept = document.getElementById("multipleHotels").checked;
+	            if (chkFormationDept) {
+	               $('#multipleHotelsTabs [data_id="multipleHotels"]').parent().removeClass('active').css('display', 'block');
+	            }
+	         })							    
+	         $("#multipleHotelsDisable").click(function () {
+	             var chkFormationDept = document.getElementById("multipleHotelsDisable").checked;
+	             if (chkFormationDept) {
+	                 $('#multipleHotelsTabs [data_id="multipleHotels"]').parent().removeClass('active').css('display', 'none');
+	             }
+	         })
+	       })
+		</script>
+
+ 	<!-- Layout and pricing -->
+		<script type="text/javascript">
+	     	$("#roomType").click(function () {
+	         var e = document.getElementById("roomType");
+	         var text = e.selectedIndex;
+	         // var chkFormationDept = e.value;
+
+	         if (text>=1) {
+	            $('#roomTypeTabs [data_id="roomType"]').parent().removeClass('active').css('display', 'block');
+	         }else{
+	            $('#roomTypeTabs [data_id="roomType"]').parent().removeClass('active').css('display', 'none');
+	         }
+	      })
+ 		</script>
+
+	 	<script type="text/javascript">
+	      $(document).on('click','#addExtraField',function (e) {
+	      e.preventDefault()
+	      console.log('here')
+	      var html = "<div class='row'><div class='col-md-6'> <select class='fieldlabels'><option value='1'>Single bed &nbsp;&nbsp;/&nbsp;&nbsp;90-130 cm wide</option><option value='2'>Double bed &nbsp;&nbsp;/&nbsp;&nbsp;131-150 cm wide</option><option value='3'>Large bed (King size) &nbsp;&nbsp;/&nbsp;&nbsp;151-180 cm wide</option><option value='4'>Extra-large double bed (Super-king size) &nbsp;&nbsp;/&nbsp;&nbsp;181-210 cm wide</option><option value='5'>Bunk bed &nbsp;&nbsp;/&nbsp;&nbsp;Variable Size</option><option value='6'>Sofa bed &nbsp;&nbsp;/&nbsp;&nbsp;Variable Size</option><option value='7'>Futon Mat &nbsp;&nbsp;/&nbsp;&nbsp;Variable Size</option> </select></div><p class='multiple'><b>X</b></p><div class='col-md-4'> <select class='fieldlabels'><option>Number of beds</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option> </select></div><div class='col-md'> <button type='button' class='btn btn-danger' data-dismiss='modal'>X</button></div></div>"
+	      $('#productExtraBody').append(html)
+	      });
+	   </script>
+
+ 	<!-- Facilities & services -->
+		<script type="text/javascript">
+	     	$("#parking_available").click(function () {
+	         var e = document.getElementById("parking_available");
+	         var value = e.selectedIndex;
+	         // var chkFormationDept = e.value;
+
+	         if (value==1) {
+	            $('#parking_Tabs_withPrice [data_id="parking_all"]').parent().removeClass('active').css('display', 'block');
+	            $('#parking_Tabs_withoutPrice [data_id="parking_all"]').parent().removeClass('active').css('display', 'none');
+	         }
+
+	         if (value==2) {
+	            $('#parking_Tabs_withPrice [data_id="parking_all"]').parent().removeClass('active').css('display', 'none');
+	            $('#parking_Tabs_withoutPrice [data_id="parking_all"]').parent().removeClass('active').css('display', 'block');
+	         }
+
+	         if (value==0) {
+	            $('#parking_Tabs_withPrice [data_id="parking_all"]').parent().removeClass('active').css('display', 'none');
+	            $('#parking_Tabs_withoutPrice [data_id="parking_all"]').parent().removeClass('active').css('display', 'none');
+	         }
+	      })
+	 	</script>
+
+	 	<!-- Language -->
+		<script type="text/javascript">
+	      $(document).on('click','#addExtraField2',function (e) {
+	      e.preventDefault()
+	      console.log('here')
+	      var html = "<div class='row'><div class='col-6'> <select id='lang_spoken_by_staff' class='fieldlabels' name='staff_language'><option value=''>Please select</option><option value='en'>English</option><option value='bng'>Bangla</option><option value='chi'>China</option> </select></div></div>"
+	      $('#productExtraBody2').append(html)
+	      });
+	   </script>
+
+	 	<script type="text/javascript">
+	     	$("#breakfast_included").click(function () {
+	         var e = document.getElementById("breakfast_included");
+	         var value = e.selectedIndex;
+	         // var chkFormationDept = e.value;
+
+	         if (value==1) {
+	            $('#breakfast_withPrice [data_id="breakfast_all"]').parent().removeClass('active').css('display', 'none');
+	            $('#breakfast_withItem [data_id="breakfast_all"]').parent().removeClass('active').css('display', 'block');
+	         }
+
+	         if (value==2) {
+	            $('#breakfast_withPrice [data_id="breakfast_all"]').parent().removeClass('active').css('display', 'block');
+	            $('#breakfast_withItem [data_id="breakfast_all"]').parent().removeClass('active').css('display', 'block');
+	         }
+
+	         if (value==0) {
+	            $('#breakfast_withPrice [data_id="breakfast_all"]').parent().removeClass('active').css('display', 'none');
+	            $('#breakfast_withItem [data_id="breakfast_all"]').parent().removeClass('active').css('display', 'none');
+	         }
+	      })
+	 	</script>
+
+	 	<script type="text/javascript">
+	      
+	      $(document).on('click','#addExtraField3',function (e) {
+	      e.preventDefault()
+	      console.log('here')
+	      var html = "<div class='row'><div class='col'><div class='row'><div class='col-auto'> <select id='breakfast_type_0' name='breakfast_type'><option> Please select</option><option>Continental</option><option>American</option><option>Buffet</option><option>A la carte</option><option>Italian</option><option>Full English/Irish</option><option>Vegetarian</option><option>Vegan</option><option>Halal</option><option>Gluten-free</option><option>Kosher</option><option>Asian</option> </select></div><div class='col-auto mt-1'> <button type='button' class='btn btn-danger' data-dismiss='modal'>X</button></div></div></div></div>"
+	      $('#productExtraBody_Breakfast').append(html)
+	      });
+	   </script>
+
+ 	<!-- Amenities -->
+		<script type="text/javascript">
+     	$(function () {
+
+         $("#extraBedsDisable").click(function () {
+            var chkFormationDept = document.getElementById("extraBedsDisable").checked;
+            if (chkFormationDept) {
+               $('#tabs [data_id="extraBeds"]').parent().removeClass('active').css('display', 'none');
+            }
+         })
+    
+         $("#extraBedsVisiable").click(function () {
+             var chkFormationDept = document.getElementById("extraBedsVisiable").checked;
+             if (chkFormationDept) {
+                 $('#tabs [data_id="extraBeds"]').parent().removeClass('active').css('display', 'block');
+             }
+         })
+      })
+
+     	$("#childrenUp2").click(function () {
+          var chkFormationDept = document.getElementById("childrenUp2").checked;
+          if (chkFormationDept) {
+              $('#tabs [data_id="childrenUp2"]').parent().removeClass('active').css('display', 'block');
+          }else{
+              $('#tabs [data_id="childrenUp2"]').parent().removeClass('active').css('display', 'none');
+          }
+      })
+
+      $("#children").click(function () {
+          var chkFormationDept = document.getElementById("children").checked;
+          if (chkFormationDept) {
+              $('#tabs [data_id="children"]').parent().removeClass('active').css('display', 'block');
+          }else{
+              $('#tabs [data_id="children"]').parent().removeClass('active').css('display', 'none');
+          }
+      })
+
+		$("#adults").click(function () {
+          var chkFormationDept = document.getElementById("adults").checked;
+          if (chkFormationDept) {
+              $('#tabs [data_id="adults"]').parent().removeClass('active').css('display', 'block');
+          }else{
+              $('#tabs [data_id="adults"]').parent().removeClass('active').css('display', 'none');
+          }
+      })
+ 		</script>
+
+ 	<!-- Photos -->
+	 	<script>
+			function preview_images(){
+			 	var total_file=document.getElementById("images").files.length;
+			 		for(var i=0;i<total_file;i++){
+			  			$('#image_preview').append("<div class='col-3'><img class='img-fluid img-thumbnail imagePreview' src='"+URL.createObjectURL(event.target.files[i])+"'></div>");
+			  		}
+			}
+		</script>
+ 		
+ 	<!-- Policies -->
+ 		<script type="text/javascript">
+	     	$("#pets_allowed").click(function () {
+	         var e = document.getElementById("pets_allowed");
+	         var value = e.selectedIndex;
+	         // var chkFormationDept = e.value;
+
+	         if (value>=1) {
+	            $('#pets_allowed_Tabs [data_id="pets_allowed"]').parent().removeClass('active').css('display', 'block');
+	         }else{
+	            $('#pets_allowed_Tabs [data_id="pets_allowed"]').parent().removeClass('active').css('display', 'none');
+	         }
+	      })
+		</script>
+
+	<!-- Payment -->
+		<script type="text/javascript">
+	     	$(function () {
+	         $("#paymentVisiable").click(function () {
+	            var chkFormationDept = document.getElementById("paymentVisiable").checked;
+	            if (chkFormationDept) {
+	               $('#tabs [data_id="3"]').parent().removeClass('active').css('display', 'block');
+	               $('#tabs [data_id="4"]').parent().removeClass('active').css('display', 'none');
+
+	            }
+	         })							    
+	         $("#paymentDisable").click(function () {
+	             var chkFormationDept = document.getElementById("paymentDisable").checked;
+	             if (chkFormationDept) {
+	                 $('#tabs [data_id="3"]').parent().removeClass('active').css('display', 'none');
+	                 $('#tabs [data_id="4"]').parent().removeClass('active').css('display', 'block');
+	             }
+	         })
+	       })
+	 	</script>
+
+	 	<script type="text/javascript">
+	     	$("#variant").click(function () {
+	         var e = document.getElementById("variant");
+	         var value = e.selectedIndex;
+	         // var chkFormationDept = e.value;
+
+	         if (value==0 || value==2) {
+	            $('#licenseNumber_Tabs [data_id="licenseNumber"]').parent().removeClass('active').css('display', 'block');
+	            $('#exceptionReason_Tabs [data_id="exceptionReason"]').parent().removeClass('active').css('display', 'none');
+	         }
+
+	         if (value==1) {
+	            $('#licenseNumber_Tabs [data_id="licenseNumber"]').parent().removeClass('active').css('display', 'none');
+	            $('#exceptionReason_Tabs [data_id="exceptionReason"]').parent().removeClass('active').css('display', 'block');
+	         }
+
+	      })
+	 	</script>
+
+</body>
+</html>
+
